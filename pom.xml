@@ -7,14 +7,14 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-mvc-ws-rest-hibernate-template</name>
 	<url>http://maven.apache.org</url>
-	
+
 	<properties>
 		<spring-version>4.2.5.RELEASE</spring-version>
 		<servlet-version>2.5</servlet-version>
 	</properties>
 
 	<dependencies>
-	
+
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
@@ -68,7 +68,7 @@
 			<artifactId>postgresql</artifactId>
 			<version>9.4-1200-jdbc4</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
@@ -87,9 +87,43 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
+
 	</dependencies>
 
 	<build>
 		<finalName>spring-mvc-ws-rest-hibernate-template</finalName>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<source>1.8</source>
+						<target>1.8</target>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>jaxb2-maven-plugin</artifactId>
+				<version>1.5</version>
+				<executions>
+					<execution>
+						<id>xjc</id>
+						<goals>
+							<goal>xjc</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<schemaDirectory>src/main/resources/xsd</schemaDirectory>
+					<schemaIncludes>
+						<include>myapp.xsd</include>
+					</schemaIncludes>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 </project>

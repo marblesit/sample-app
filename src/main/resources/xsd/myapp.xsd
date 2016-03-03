@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://marblesit.com/myapp/V1_0_0" xmlns:tns="http://www.example.org/myapp" elementFormDefault="qualified">
+
+	<element name="GetMemberRequest">
+		<complexType>
+			<sequence>
+				<element name="id" type="long"/>
+			</sequence>
+		</complexType>
+	</element>
+	
+	<element name="GetMemberResponse">
+		<complexType>
+			<sequence>
+				<element name="name" type="string"/>
+				<element name="phoneNumbers" type="string" minOccurs="0" maxOccurs="unbounded"/>
+			</sequence>
+		</complexType>
+	</element>
+
+</schema>
