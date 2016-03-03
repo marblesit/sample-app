@@ -9,6 +9,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.apache.commons.lang3.StringUtils;
+
 @Entity
 @Table(name="members")
 public class Member {
@@ -53,5 +55,9 @@ public class Member {
 	@Override
 	public String toString() {
 		return getName();
+	}
+
+	public String getPhoneNumbers() {
+		return StringUtils.join(phoneNumbers, ",");
 	}
 }
