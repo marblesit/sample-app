@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:ws="http://www.springframework.org/schema/web-services"
+	
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+						http://www.springframework.org/schema/web-services http://www.springframework.org/schema/web-services/web-services.xsd">
 
+	<ws:annotation-driven/>
+
+	<context:component-scan base-package="com.marblesit.myapp.ws"/>
+
+	<ws:dynamic-wsdl id="myService" portTypeName="MyServicePort" locationUri="http://localhost:8080/myService/">
+		<ws:xsd location="classpath:/xsd/myapp.xsd"/>
+	</ws:dynamic-wsdl>
 
 </beans>
