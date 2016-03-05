@@ -1,5 +1,7 @@
 package com.marblesit.myapp.mvc;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -14,6 +16,8 @@ public class HomeController {
 
 	@Autowired
 	private MyAppService service;
+
+	public static final Logger log = LoggerFactory.getLogger(HomeController.class);
 	
 	@RequestMapping("home")
 	public ModelAndView home(ModelMap model) {
@@ -26,6 +30,7 @@ public class HomeController {
 //		mv.addObject("name", member.getName() + " phone: " + member.getPhoneNumbers());
 
 		mv.addObject("name", member.getName());
+
 		return mv;
 	}
 }
