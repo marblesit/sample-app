@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.marblesit.myapp.entity.Member;
-import com.marblesit.myapp.service.MyAppService;
+import com.marblesit.myapp.service.SampleService;
 
 @Controller
 public class HomeController {
 
 	@Autowired
-	private MyAppService service;
+	private SampleService service;
 
 	public static final Logger log = LoggerFactory.getLogger(HomeController.class);
 	

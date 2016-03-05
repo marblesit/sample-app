@@ -13,7 +13,7 @@
 	<context:component-scan base-package="com.marblesit.myapp.ws"/>
 
 	<ws:dynamic-wsdl id="myService" portTypeName="MyServicePort" locationUri="http://localhost:8080/myapp/ws/myService">
-		<ws:xsd location="classpath:/xsd/myapp.xsd"/>
+		<ws:xsd location="classpath:/xsd/sample-service.xsd"/>
 	</ws:dynamic-wsdl>
 
 </beans>

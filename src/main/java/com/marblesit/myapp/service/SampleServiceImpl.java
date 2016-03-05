@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import com.marblesit.myapp.entity.Member;
 
 @Service
-public class MyAppServiceImpl implements MyAppService {
+public class SampleServiceImpl implements SampleService {
 	
 	@Autowired
 	private MemberRepository repo;

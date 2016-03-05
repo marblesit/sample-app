@@ -7,15 +7,15 @@ import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
 import com.marblesit.myapp.entity.Member;
-import com.marblesit.myapp.service.MyAppService;
+import com.marblesit.myapp.service.SampleService;
 import com.marblesit.myapp.v1_0_0.GetMemberRequest;
 import com.marblesit.myapp.v1_0_0.GetMemberResponse;
 
 @Endpoint
-public class MyAppEndpoint {
+public class SampleServiceEndpoint {
 	
 	@Autowired
-	private MyAppService service;
+	private SampleService service;
 
 	@PayloadRoot(localPart="GetMemberRequest", namespace="http://marblesit.com/myapp/V1_0_0")
 	public @ResponsePayload GetMemberResponse getMember(@RequestPayload GetMemberRequest request) {

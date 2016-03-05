@@ -6,16 +6,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.marblesit.myapp.entity.Member;
-import com.marblesit.myapp.service.MyAppService;
+import com.marblesit.myapp.service.SampleService;
 
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @RestController
-public class MyController {
+public class SampleServiceRestController {
 	
 	@Autowired
-	private MyAppService service;
+	private SampleService service;
 
 	/*
 	 * URL http://localhost:8080/myapp/rest/member/1

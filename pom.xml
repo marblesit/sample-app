@@ -155,7 +155,7 @@
 				<configuration>
 					<schemaDirectory>src/main/resources/xsd</schemaDirectory>
 					<schemaIncludes>
-						<include>myapp.xsd</include>
+						<include>*.xsd</include>
 					</schemaIncludes>
 				</configuration>
 			</plugin>

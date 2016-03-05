@@ -7,10 +7,10 @@
     </appender>
 
     <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>myapp.log</file>
+        <file>sample-app.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- daily rollover -->
-            <fileNamePattern>myapp.%d{yyyy-MM-dd}.log.zip</fileNamePattern>
+            <fileNamePattern>sample-app.%d{yyyy-MM-dd}.log.zip</fileNamePattern>
         </rollingPolicy>
 
         <encoder>
