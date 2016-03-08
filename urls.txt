@@ -1,4 +1,3 @@
 http://localhost:8080/sampleapp/mvc/home
 http://localhost:8080/sampleapp/ws/myService.wsdl
 http://localhost:8080/sampleapp/rest/member/1
-
