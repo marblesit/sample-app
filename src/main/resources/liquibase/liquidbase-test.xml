@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="2" author="cory" context="test">
+		<insert tableName="members">
+			<column name="id" value="1"/>
+			<column name="first" value="Cory"/>
+			<column name="middle" value="L"/>
+			<column name="last" value="Wandling"/>
+		</insert>
+		<insert tableName="phone_numbers">
+			<column name="id" value="1"/>
+			<column name="number" value="515.451.3671"/>
+			<column name="member_id" value="1"/>
+		</insert>
+    </changeSet>
+
+</databaseChangeLog>
