@@ -37,8 +37,16 @@
             <pattern>%date %-5level %logger{35} - %message%n</pattern>
         </layout>
     </appender>
+    
+    <!-- Logging of XML messages -->
+    <logger name="org.springframework.ws.client.MessageTracing">
+    	<level value="TRACE"/>
+    </logger>
+    <logger name="org.springframework.ws.server.MessageTracing">
+    	<level value="TRACE"/>
+    </logger>
 
-    <root level="debug">
+    <root level="warn">
         <appender-ref ref="console" />
         <appender-ref ref="file" />
         <appender-ref ref="email"/>
