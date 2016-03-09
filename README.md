@@ -2,7 +2,7 @@
 Technology Stack
 * Spring Web Services
   * Jaxb generation from XSD
-* String MVC
+* Spring MVC
 * Spring REST
 * JPA with Hibernate
   * Spring Transaction annotations
