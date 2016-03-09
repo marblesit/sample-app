@@ -6,5 +6,6 @@ Technology Stack
 * Spring REST
 * JPA with Hibernate
   * Spring Transaction annotations
+  * Spring Data
 * Logback
 * Liquibase
