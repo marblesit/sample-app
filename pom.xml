@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>com.marblesit</groupId>
 		<artifactId>parent-pom</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>0.0.1</version>
 	</parent>
 
 	<artifactId>spring-mvc-ws-rest-hibernate-template</artifactId>
