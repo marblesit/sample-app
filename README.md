@@ -1,4 +1,4 @@
-# spring-mvc-ws-rest-hibernate-template
+# Sample App
 Technology Stack
 * Spring Web Services
   * Jaxb generation from XSD
@@ -8,4 +8,4 @@ Technology Stack
   * Spring Transaction annotations
   * Spring Data
 * Logback
-* Liquibase
+* Liquibase with Postgres
