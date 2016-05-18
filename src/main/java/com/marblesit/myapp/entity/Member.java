@@ -1,15 +1,9 @@
 package com.marblesit.myapp.entity;
 
-import java.util.Set;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
-import org.apache.commons.lang3.StringUtils;
 
 @Entity
 @Table(name="members")
@@ -27,10 +21,6 @@ public class Member {
 
 	@Column(name="last")
 	private String last;
-	
-	@OneToMany
-	@JoinColumn(name="member_id")
-	private Set<PhoneNumber> phoneNumbers;
 
 	public Member() {
 		super();
@@ -55,9 +45,5 @@ public class Member {
 	@Override
 	public String toString() {
 		return getName();
-	}
-
-	public String getPhoneNumbers() {
-		return StringUtils.join(phoneNumbers, ",");
 	}
 }

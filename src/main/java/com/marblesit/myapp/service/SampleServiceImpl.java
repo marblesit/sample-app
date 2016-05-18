@@ -7,7 +7,7 @@ import com.marblesit.myapp.entity.Member;
 
 @Service
 public class SampleServiceImpl implements SampleService {
-	
+
 	@Autowired
 	private MemberRepository repo;
 
@@ -15,5 +15,4 @@ public class SampleServiceImpl implements SampleService {
 	public Member getMember(long id) {
 		return repo.findOne(id);
 	}
-
 }
